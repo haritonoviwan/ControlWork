@@ -12,6 +12,29 @@
     return inputArray;
 }
 
+string[] FilterShortStrings(string[] array)
+{
+    int counter = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            counter++;
+        }
+    }
+    string[] newArray = new string[counter];
+    int index = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            newArray[index] = array[i];
+            index++;
+        }
+    }
+    return newArray;
+}
+
 void PrintArray(string[] array)
 {
     Console.Write("[");
