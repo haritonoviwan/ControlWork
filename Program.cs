@@ -1,4 +1,11 @@
-﻿string[] GetArrayFromUser()
+﻿Console.Clear();
+string[] myArray = GetArrayFromUser();
+string[] resultArray = FilterShortStrings(myArray);
+PrintArray(myArray);
+Console.Write(" -> ");
+PrintArray(resultArray);
+
+string[] GetArrayFromUser()
 {
     Console.Write("Введите количество строк в массиве: ");
     int n = int.Parse(Console.ReadLine());
