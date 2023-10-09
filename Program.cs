@@ -11,3 +11,20 @@
     }
     return inputArray;
 }
+
+void PrintArray(string[] array)
+{
+    Console.Write("[");
+    for (int index = 0; index < array.Length; index++)
+    {
+        if (index < array.Length - 1)
+        {
+            Console.Write($"{array[index]}, ");
+        }
+        else
+        {
+            Console.Write(array[index]);
+        }
+    }
+    Console.Write("]");
+}
